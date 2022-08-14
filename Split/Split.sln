@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.810.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Split.Android", "Split.Android\Split.Android.csproj", "{7CD2BE6F-3196-4575-80F6-82BC02CB40F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Split", "Split\Split.csproj", "{19875A86-B46D-4829-AEEF-1414BF310243}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7CD2BE6F-3196-4575-80F6-82BC02CB40F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CD2BE6F-3196-4575-80F6-82BC02CB40F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CD2BE6F-3196-4575-80F6-82BC02CB40F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CD2BE6F-3196-4575-80F6-82BC02CB40F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19875A86-B46D-4829-AEEF-1414BF310243}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19875A86-B46D-4829-AEEF-1414BF310243}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19875A86-B46D-4829-AEEF-1414BF310243}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19875A86-B46D-4829-AEEF-1414BF310243}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F94F7A14-1C31-41B8-9CFE-C9755BCB4ACB}
+	EndGlobalSection
+EndGlobal

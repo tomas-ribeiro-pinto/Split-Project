@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage NavigationPage.HasNavigationBar="false"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Split.MainPage">
+
+<StackLayout Margin="20,35,20,20">
+        <Label
+            Text="Welcome to Split"
+            HorizontalOptions="Center"
+            TextColor="Black"
+            FontSize="Title"
+            Padding="5"
+            BackgroundColor="White"/>
+        <Label
+            x:Name="currentTrip"
+            FontSize="Subtitle"
+            HorizontalOptions="Center"/>
+
+        <Button Text="+ Add Expense"
+                Margin="0, 30, 0, 25"
+                HorizontalOptions="End"
+                CornerRadius="5"
+                BackgroundColor="CornflowerBlue"
+                TextColor="White"
+                FontAttributes="Bold"
+                Clicked="OnAddExpenseClicked" />
+
+        <Label
+            Text="Expenses:"
+            Margin="0, 0, 0, 10"
+            FontAttributes="Bold"
+            TextColor="Black"
+            FontSize="Subtitle"
+            BackgroundColor="Beige"
+            HorizontalOptions="Start"/>
+
+        <CollectionView x:Name="expenseView" HeightRequest="400" SelectionMode="None">
+            <!--SelectionChanged="expenseView_SelectionChanged"-->
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+                                <Label Text="{Binding Title}"
+                                       FontSize="Medium"
+                                       TextColor="Black"/>
+                                <Label Grid.Row="1"
+                                       Margin="0,0,20,20"
+                                       Text="{Binding Amount, StringFormat='{0:0.00}€'}"
+                                       TextColor="Silver"
+                                       FontSize="Medium" />
+                                <Button Grid.Column="1"
+                                        Text="Delete"
+                                        FontSize="15"
+                                        HeightRequest="30"
+                                        BackgroundColor="Red"
+                                        TextColor="White"
+                                        CornerRadius="5"
+                                        Clicked="OnDelete"
+                                        HorizontalOptions="End"/>
+                        </Grid>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button Text="Delete All"
+                Clicked="OnDeleteAll"
+                BackgroundColor="Orange"
+                TextColor="White"
+                HorizontalOptions="End"/>
+
+        <Label x:Name="totalAmount"
+               FontSize="Large"
+               Padding="10"
+               TextColor="White"
+            HorizontalOptions="End"
+            BackgroundColor="Black"/>
+    </StackLayout>
+
+</ContentPage>
+

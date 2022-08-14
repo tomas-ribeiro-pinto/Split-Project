@@ -1,0 +1,36 @@
+﻿<Properties StartupConfiguration="{7CD2BE6F-3196-4575-80F6-82BC02CB40F6}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Split/MainPage.xaml.cs">
+    <Files>
+      <File FileName="Split/MainPage.xaml" Line="35" Column="36" />
+      <File FileName="Split/MainPage.xaml.cs" Line="99" Column="1" />
+      <File FileName="Split/Databases/Expense.cs" />
+      <File FileName="Split/Databases/ExpenseDatabase.cs" />
+      <File FileName="Split/App.xaml.cs" />
+      <File FileName="Split/AddExpensePage.xaml" />
+      <File FileName="Split/AddExpensePage.xaml.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Split" expanded="True">
+            <Node name="Split" expanded="True">
+              <Node name="Databases" expanded="True" />
+              <Node name="AddExpensePage.xaml" expanded="True" />
+              <Node name="MainPage.xaml" expanded="True">
+                <Node name="MainPage.xaml.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="Split.Android" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Split.Android PreferredExecutionTarget="Android.SelectDevice" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
