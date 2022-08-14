@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LjNTMxsyyvwkTlnSLbU+56EApuHZ7tjC7oPUTSXdUyYi1jlCuCOCI65FB+8Rqf7UAwr0RQGi0jg4HwuZRfHo+w==",
+  "dgSpecHash": "D26h368srqb4gA7V0yonX5jCYO9qnhV0/8pSHXJvay2H4DWOBVL7ZGzXtaumfJ1tuXtgODtI0bE4ZqKUxEYA6Q==",
   "success": true,
-  "projectFilePath": "/Users/tomaspinto/Projects/Split/Split/Split.csproj",
+  "projectFilePath": "/Users/tomaspinto/Documents/GitHub/Split-Project/Split/Split/Split.csproj",
   "expectedPackageFiles": [
     "/Users/tomaspinto/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "/Users/tomaspinto/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512",

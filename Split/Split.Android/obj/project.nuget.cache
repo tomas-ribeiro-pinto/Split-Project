@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jzG6qYmHHdrjPA55ZziSWTDYFEIXqYT/gMYCXLJunvg+45s5sHgNr5z0gdaYwjpvusF4Cz/tb/9amqIWHJogcQ==",
+  "dgSpecHash": "gqInEQFgtXsRABvI4CK43hauQFmoKj4fRUaZu4TFhFBkfzllqxm8iPNAWsZkE1V1xR+6UiUgppFGeaTxwU9JUg==",
   "success": true,
-  "projectFilePath": "/Users/tomaspinto/Projects/Split/Split.Android/Split.Android.csproj",
+  "projectFilePath": "/Users/tomaspinto/Documents/GitHub/Split-Project/Split/Split.Android/Split.Android.csproj",
   "expectedPackageFiles": [
     "/Users/tomaspinto/.nuget/packages/sqlite-net-pcl/1.8.116/sqlite-net-pcl.1.8.116.nupkg.sha512",
     "/Users/tomaspinto/.nuget/packages/sqlitepclraw.bundle_green/2.0.4/sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",

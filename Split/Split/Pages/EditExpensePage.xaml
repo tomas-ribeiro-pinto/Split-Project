@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Split.EditExpensePage">
+
+    <StackLayout Margin="20,35,20,20">
+        <Entry x:Name="titleEntry"
+               Text="{Binding Title}"
+               Placeholder="Enter Expense Title"
+               IsEnabled="False"/>
+        <Entry x:Name="amountEntry"
+               Text="{Binding Amount}"
+               Placeholder="Enter Amount"
+               IsEnabled="False"
+               IsTextPredictionEnabled="False"
+               Keyboard="Numeric"/>
+
+        <Button Grid.Column="1"
+                Text="Edit Details"
+                FontSize="15"
+                BackgroundColor="CornflowerBlue"
+                TextColor="White"
+                CornerRadius="5"
+                Clicked="OnEditExpense"
+                HorizontalOptions="End"/>
+
+        <Button x:Name="SaveButton"
+                Grid.Column="1"
+                Text="Save Details"
+                FontSize="15"
+                BackgroundColor="Green"
+                TextColor="White"
+                CornerRadius="5"
+                Clicked="OnSaveExpense"
+                IsVisible="False"
+                HorizontalOptions="End"/>
+
+        <Button x:Name="EditButton"
+                Grid.Column="1"
+                Text="Delete"
+                FontSize="15"
+                BackgroundColor="Red"
+                TextColor="White"
+                CornerRadius="5"
+                Clicked="OnDelete"
+                HorizontalOptions="End"/>
+    </StackLayout>
+</ContentPage>

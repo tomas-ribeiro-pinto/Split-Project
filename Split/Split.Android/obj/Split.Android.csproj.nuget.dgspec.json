@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/tomaspinto/Projects/Split/Split.Android/Split.Android.csproj": {}
+    "/Users/tomaspinto/Documents/GitHub/Split-Project/Split/Split.Android/Split.Android.csproj": {}
   },
   "projects": {
-    "/Users/tomaspinto/Projects/Split/Split.Android/Split.Android.csproj": {
+    "/Users/tomaspinto/Documents/GitHub/Split-Project/Split/Split.Android/Split.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/tomaspinto/Projects/Split/Split.Android/Split.Android.csproj",
+        "projectUniqueName": "/Users/tomaspinto/Documents/GitHub/Split-Project/Split/Split.Android/Split.Android.csproj",
         "projectName": "Split.Android",
-        "projectPath": "/Users/tomaspinto/Projects/Split/Split.Android/Split.Android.csproj",
+        "projectPath": "/Users/tomaspinto/Documents/GitHub/Split-Project/Split/Split.Android/Split.Android.csproj",
         "packagesPath": "/Users/tomaspinto/.nuget/packages/",
-        "outputPath": "/Users/tomaspinto/Projects/Split/Split.Android/obj/",
+        "outputPath": "/Users/tomaspinto/Documents/GitHub/Split-Project/Split/Split.Android/obj/",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
@@ -26,8 +26,8 @@
         "frameworks": {
           "monoandroid11.0": {
             "projectReferences": {
-              "/Users/tomaspinto/Projects/Split/Split/Split.csproj": {
-                "projectPath": "/Users/tomaspinto/Projects/Split/Split/Split.csproj"
+              "/Users/tomaspinto/Documents/GitHub/Split-Project/Split/Split/Split.csproj": {
+                "projectPath": "/Users/tomaspinto/Documents/GitHub/Split-Project/Split/Split/Split.csproj"
               }
             }
           }
@@ -48,14 +48,14 @@
         }
       }
     },
-    "/Users/tomaspinto/Projects/Split/Split/Split.csproj": {
+    "/Users/tomaspinto/Documents/GitHub/Split-Project/Split/Split/Split.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/tomaspinto/Projects/Split/Split/Split.csproj",
+        "projectUniqueName": "/Users/tomaspinto/Documents/GitHub/Split-Project/Split/Split/Split.csproj",
         "projectName": "Split",
-        "projectPath": "/Users/tomaspinto/Projects/Split/Split/Split.csproj",
+        "projectPath": "/Users/tomaspinto/Documents/GitHub/Split-Project/Split/Split/Split.csproj",
         "packagesPath": "/Users/tomaspinto/.nuget/packages/",
-        "outputPath": "/Users/tomaspinto/Projects/Split/Split/obj/",
+        "outputPath": "/Users/tomaspinto/Documents/GitHub/Split-Project/Split/Split/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/tomaspinto/.config/NuGet/NuGet.Config"

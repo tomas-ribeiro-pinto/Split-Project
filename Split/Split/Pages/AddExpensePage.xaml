@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Split.AddExpensePage">
+
+    <StackLayout Margin="20,35,20,20">
+        <Entry x:Name="titleEntry"
+               Placeholder="Enter Expense Title" />
+        <Entry x:Name="amountEntry"
+               Placeholder="Enter Amount"
+               IsTextPredictionEnabled="False"
+               Keyboard="Numeric"/>
+
+        <Button Text="Add Expense"
+                Clicked="AddExpense" />
+    </StackLayout>
+</ContentPage>

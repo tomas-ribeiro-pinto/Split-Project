@@ -845,11 +845,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/tomaspinto/Projects/Split/Split/Split.csproj",
+      "projectUniqueName": "/Users/tomaspinto/Documents/GitHub/Split-Project/Split/Split/Split.csproj",
       "projectName": "Split",
-      "projectPath": "/Users/tomaspinto/Projects/Split/Split/Split.csproj",
+      "projectPath": "/Users/tomaspinto/Documents/GitHub/Split-Project/Split/Split/Split.csproj",
       "packagesPath": "/Users/tomaspinto/.nuget/packages/",
-      "outputPath": "/Users/tomaspinto/Projects/Split/Split/obj/",
+      "outputPath": "/Users/tomaspinto/Documents/GitHub/Split-Project/Split/Split/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/tomaspinto/.config/NuGet/NuGet.Config"

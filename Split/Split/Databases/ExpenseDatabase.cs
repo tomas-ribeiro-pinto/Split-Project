@@ -38,6 +38,16 @@ namespace Split
             return _database.Table<Expense>().ToListAsync();
         }
 
+        public Task<Expense> GetItemAsync(int id)
+        {
+            return _database.Table<Expense>().Where(i => i.ID == id).FirstOrDefaultAsync();
+        }
+
+        public Task<int> UpdateExpenseAsync(Expense expense)
+        {
+            return _database.UpdateAsync(expense);
+        }
+
         public Task<int> SaveExpenseAsync(Expense expense)
         {
             return _database.InsertAsync(expense);

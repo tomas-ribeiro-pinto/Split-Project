@@ -17,5 +17,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="sqlite-net-pcl" />
+    <None Remove="Pages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Pages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Pages\AddExpensePage.xaml.cs">
+      <DependentUpon>AddExpensePage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
