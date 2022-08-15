@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Split.Pages;
 using Xamarin.Forms;
 
 namespace Split
@@ -107,8 +108,16 @@ namespace Split
             {
                 Title = "Add Expense"
             };
-            //AddExpensePage.BackgroundColor = Color.Beige;
             await Navigation.PushAsync(AddExpensePage);
+        }
+
+        async void SeePeople(object sender, EventArgs e)
+        {
+            Page PeoplePage = new PeoplePage
+            {
+                Title = "People"
+            };
+            await Navigation.PushAsync(PeoplePage);
         }
     }
 }

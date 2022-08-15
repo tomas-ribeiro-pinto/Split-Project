@@ -7,6 +7,7 @@ namespace Split
     public partial class App : Application
     {
         static ExpenseDatabase expenseDatabase;
+        static PeopleDatabase peopleDatabase;
 
         public static ExpenseDatabase ExpenseDatabase
         {
@@ -14,9 +15,21 @@ namespace Split
             {
                 if (expenseDatabase == null)
                 {
-                    expenseDatabase = new ExpenseDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "expense.db3"));
+                    expenseDatabase = new ExpenseDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "expense_v1.db3"));
                 }
                 return expenseDatabase;
+            }
+        }
+
+        public static PeopleDatabase PeopleDatabase
+        {
+            get
+            {
+                if (peopleDatabase == null)
+                {
+                    peopleDatabase = new PeopleDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "people_v1.db3"));
+                }
+                return peopleDatabase;
             }
         }
 

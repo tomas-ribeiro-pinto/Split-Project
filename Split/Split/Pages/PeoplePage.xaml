@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Split.Pages.PeoplePage">
+
+    <StackLayout Margin="20,35,20,20">
+        <Grid>
+            <Label 
+                Text="People"
+                FontAttributes="Bold"
+                TextColor="Black"
+                FontSize="Large"/>
+            <ImageButton Grid.Row="0"
+                Source="person_add"
+                HorizontalOptions="End"
+                HeightRequest="55"
+                CornerRadius="30"
+                BackgroundColor="LightGray"
+                Padding="9"
+                Clicked="AddPeoplePage"/>
+        </Grid>
+        <CollectionView x:Name="peopleView" HeightRequest="400" SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+                                <Label Text="{Binding Name}"
+                                       FontSize="Medium"
+                                       TextColor="Black"/>
+                        </Grid>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

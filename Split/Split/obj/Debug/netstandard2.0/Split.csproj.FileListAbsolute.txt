@@ -31,3 +31,5 @@
 /Users/tomaspinto/Documents/GitHub/Split-Project/Split/Split/obj/Debug/netstandard2.0/Split.dll
 /Users/tomaspinto/Documents/GitHub/Split-Project/Split/Split/obj/Debug/netstandard2.0/ref/Split.dll
 /Users/tomaspinto/Documents/GitHub/Split-Project/Split/Split/obj/Debug/netstandard2.0/Split.pdb
+/Users/tomaspinto/Documents/GitHub/Split-Project/Split/Split/obj/Debug/netstandard2.0/Pages/PeoplePage.xaml.g.cs
+/Users/tomaspinto/Documents/GitHub/Split-Project/Split/Split/obj/Debug/netstandard2.0/Pages/AddPeoplePage.xaml.g.cs

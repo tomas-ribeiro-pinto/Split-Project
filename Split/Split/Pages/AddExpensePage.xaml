@@ -6,12 +6,23 @@
 
     <StackLayout Margin="20,35,20,20">
         <Entry x:Name="titleEntry"
-               Placeholder="Enter Expense Title" />
+               Placeholder="Enter expense title" />
         <Entry x:Name="amountEntry"
-               Placeholder="Enter Amount"
+               Placeholder="Enter amount"
                IsTextPredictionEnabled="False"
                Keyboard="Numeric"/>
+        <Label
+            Text="Insert date of expense"/>
+        <DatePicker
+            x:Name="dateEntry"
+            MinimumDate="01/01/2022"
+            MaximumDate="12/31/2050"/>
 
+        <Label Text="Expense made by:"/>
+        <Picker x:Name="peopleEntry"
+                Title="Select the person who made this expense:"
+                ItemDisplayBinding="{Binding Name}"/>
+        <Label Text="Define how this expense will be split:"/>
         <Button Text="Add Expense"
                 Clicked="AddExpense" />
     </StackLayout>

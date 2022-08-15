@@ -16,6 +16,8 @@
                IsTextPredictionEnabled="False"
                Keyboard="Numeric"/>
 
+        <Label Text="{Binding DateExpense, StringFormat='{0:dd/MM/yyyy}'}"/>
+
         <Button Grid.Column="1"
                 Text="Edit Details"
                 FontSize="15"

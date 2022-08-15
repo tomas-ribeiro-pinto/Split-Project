@@ -5,6 +5,9 @@
              x:Class="Split.MainPage">
 
 <StackLayout Margin="20,35,20,20">
+        <Button
+            Text = "People"
+            Clicked="SeePeople"/>
         <Label
             Text="Welcome to Split"
             HorizontalOptions="Center"

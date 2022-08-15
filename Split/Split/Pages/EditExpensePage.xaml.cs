@@ -48,7 +48,6 @@ namespace Split
                 await App.ExpenseDatabase.UpdateExpenseAsync(currentSelection);
                 await Navigation.PopToRootAsync(false);
             }
-
         }
     }
 }

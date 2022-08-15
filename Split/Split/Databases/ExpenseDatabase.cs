@@ -12,7 +12,7 @@ namespace Split
         Expense expense1 = new Expense
         {
             Title = "Coffee Shop",
-            Amount = 2.35
+            Amount = 2.35,
         };
 
         Expense expense2 = new Expense

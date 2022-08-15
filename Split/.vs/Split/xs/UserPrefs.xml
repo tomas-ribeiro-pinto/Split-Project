@@ -1,14 +1,21 @@
 ﻿<Properties StartupConfiguration="{7CD2BE6F-3196-4575-80F6-82BC02CB40F6}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Split/Pages/EditExpensePage.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Split/Pages/EditExpensePage.xaml">
     <Files>
-      <File FileName="Split/Pages/EditExpensePage.xaml" Line="15" Column="37" />
-      <File FileName="Split/Pages/EditExpensePage.xaml.cs" Line="36" Column="39" />
-      <File FileName="Split/Pages/MainPage.xaml" Line="80" Column="38" />
-      <File FileName="Split/Pages/MainPage.xaml.cs" Line="74" Column="10" />
-      <File FileName="Split.Android/MainActivity.cs" Line="11" Column="74" />
-      <File FileName="Split/Pages/AddExpensePage.xaml" Line="13" Column="36" />
-      <File FileName="Split/Databases/ExpenseDatabase.cs" Line="59" Column="10" />
-      <File FileName="Split/Pages/AddExpensePage.xaml.cs" Line="22" Column="60" />
+      <File FileName="Split/Pages/MainPage.xaml" Line="60" Column="88" />
+      <File FileName="Split/Pages/MainPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="Split/Databases/ExpenseDatabase.cs" Line="12" Column="32" />
+      <File FileName="Split/Pages/PeoplePage.xaml" />
+      <File FileName="Split/Pages/PeoplePage.xaml.cs" Line="1" Column="1" />
+      <File FileName="Split/Databases/People.cs" Line="12" Column="11" />
+      <File FileName="Split/Databases/PeopleDatabase.cs" Line="45" Column="10" />
+      <File FileName="Split/Pages/AddPeoplePage.xaml" />
+      <File FileName="Split/Pages/AddPeoplePage.xaml.cs" Line="1" Column="1" />
+      <File FileName="Split/Pages/AddExpensePage.xaml" Line="23" Column="22" />
+      <File FileName="Split/Pages/AddExpensePage.xaml.cs" Line="34" Column="50" />
+      <File FileName="Split/Databases/Expense.cs" Line="24" Column="15" />
+      <File FileName="Split/App.xaml.cs" Line="24" Column="33" />
+      <File FileName="Split/Pages/EditExpensePage.xaml.cs" Line="1" Column="1" />
+      <File FileName="Split/Pages/EditExpensePage.xaml" Line="19" Column="66" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,14 +25,16 @@
               <Node name="Databases" expanded="True" />
               <Node name="Pages" expanded="True">
                 <Node name="AddExpensePage.xaml" expanded="True" />
-                <Node name="EditExpensePage.xaml" expanded="True">
-                  <Node name="EditExpensePage.xaml.cs" selected="True" />
-                </Node>
+                <Node name="AddPeoplePage.xaml" expanded="True" />
+                <Node name="EditExpensePage.xaml" expanded="True" selected="True" />
                 <Node name="MainPage.xaml" expanded="True" />
+                <Node name="PeoplePage.xaml" expanded="True" />
               </Node>
               <Node name="App.xaml" expanded="True" />
             </Node>
-            <Node name="Split.Android" expanded="True" />
+            <Node name="Split.Android" expanded="True">
+              <Node name="Resources" expanded="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
