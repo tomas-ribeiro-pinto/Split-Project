@@ -15,8 +15,7 @@
             Text="Insert date of expense"/>
         <DatePicker
             x:Name="dateEntry"
-            MinimumDate="01/01/2022"
-            MaximumDate="12/31/2050"/>
+            MinimumDate="01/01/2022"/>
 
         <Label Text="Expense made by:"/>
         <Picker x:Name="peopleEntry"

@@ -8,12 +8,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Split.Pages.EditExpensePage.xaml", "Pages/EditExpensePage.xaml", typeof(global::Split.EditExpensePage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Split.Pages.EditExpensePage (copy).xaml", "Pages/EditExpensePage (copy).xaml", typeof(global::Split.EditExpensePage))]
 
 namespace Split {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Pages/EditExpensePage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Pages/EditExpensePage (copy).xaml")]
     public partial class EditExpensePage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
@@ -21,9 +21,6 @@ namespace Split {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Entry amountEntry;
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Label expensePerson;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.Button SaveButton;
@@ -36,7 +33,6 @@ namespace Split {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(EditExpensePage));
             titleEntry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "titleEntry");
             amountEntry = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "amountEntry");
-            expensePerson = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "expensePerson");
             SaveButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "SaveButton");
             EditButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "EditButton");
         }

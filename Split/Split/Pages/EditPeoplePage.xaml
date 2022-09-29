@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Split.EditPeoplePage">
+
+    <CollectionView Margin="20,40,20,20" x:Name="expenseView" ItemsSource="{Binding Expense}" HeightRequest="400" SelectionMode="None">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40" />
+                            <RowDefinition Height="auto" />
+                        </Grid.RowDefinitions>
+                            <Label
+                                Text="{Binding SplitAmount, StringFormat='{0:0.00}€'}"
+                                FontSize="Medium"
+                                TextColor="Black"/>
+                        <!--
+                            <Label Grid.Row="1"
+                                    Margin="0,0,20,20"
+                                    x:Name="expenseSplitAmount"
+                                    Text="{Binding SplitAmount, StringFormat='{0:0.00}€'}"
+                                    TextColor="Silver"
+                                    FontSize="Medium" /> -->
+                            <Button Grid.Column="1"
+                                    Text="Edit"
+                                    FontAttributes="Bold"
+                                    FontSize="15"
+                                    HeightRequest="30"
+                                    BackgroundColor="Orange"
+                                    BorderWidth="1"
+                                    TextColor="White"
+                                    CornerRadius="5"
+                                    Clicked="OnEdit"
+                                    HorizontalOptions="End"/>
+                    </Grid>
+                </StackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>

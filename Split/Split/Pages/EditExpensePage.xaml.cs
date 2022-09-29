@@ -7,10 +7,26 @@ namespace Split
 {
     public partial class EditExpensePage : ContentPage
     {
+
         public EditExpensePage()
         {
             InitializeComponent();
         }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            Expense expense = (Expense)BindingContext;
+            try
+            {
+                expensePerson.Text += expense.GetPerson();
+            }
+            catch
+            {
+                expensePerson.Text += "undefined";
+            }
+        }
+
 
         async void OnDelete(object sender, EventArgs e)
         {
@@ -20,7 +36,7 @@ namespace Split
 
             if (answer)
             {
-                await App.ExpenseDatabase.DeleteExpenseEntry(currentSelection);
+                await App.ExpenseDatabase.DeleteExpense(currentSelection);
                 await Navigation.PopToRootAsync(true);
             }
         }
@@ -46,6 +62,11 @@ namespace Split
                 currentSelection.Title = titleEntry.Text;
                 currentSelection.Amount = double.Parse(amountEntry.Text);
                 await App.ExpenseDatabase.UpdateExpenseAsync(currentSelection);
+                foreach (ExpenseRecord record in App.RecordDatabase.GetRecordList_byExpense(currentSelection.ID).Result)
+                {
+                    record.SplitAmount = double.Parse(amountEntry.Text);
+                    await App.RecordDatabase.UpdateRecordAsync(record);
+                }
                 await Navigation.PopToRootAsync(false);
             }
         }

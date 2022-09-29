@@ -8,6 +8,7 @@ namespace Split
     {
         static ExpenseDatabase expenseDatabase;
         static PeopleDatabase peopleDatabase;
+        static RecordDatabase recordDatabase;
 
         public static ExpenseDatabase ExpenseDatabase
         {
@@ -33,14 +34,23 @@ namespace Split
             }
         }
 
+        public static RecordDatabase RecordDatabase
+        {
+            get
+            {
+                if (recordDatabase == null)
+                {
+                    recordDatabase = new RecordDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "record_v1.db3"));
+                }
+                return recordDatabase;
+            }
+        }
+
         public App()
         {
             InitializeComponent();
 
-            //MainPage = new MainPage();
-
             MainPage = new NavigationPage(new MainPage());
-            //MainPage.Title = "Welcome to Split";
         }
 
         protected override void OnStart()

@@ -16,7 +16,8 @@
                IsTextPredictionEnabled="False"
                Keyboard="Numeric"/>
 
-        <Label Text="{Binding DateExpense, StringFormat='{0:dd/MM/yyyy}'}"/>
+        <Label Text="{Binding DateExpense, StringFormat='Date of expense: {0:dd/MM/yyyy}'}"/>
+        <Label x:Name="expensePerson" Text="Expense made by: "/>
 
         <Button Grid.Column="1"
                 Text="Edit Details"

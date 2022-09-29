@@ -34,6 +34,17 @@
                                 <Label Text="{Binding Name}"
                                        FontSize="Medium"
                                        TextColor="Black"/>
+                                <Button Grid.Column="1"
+                                        Text="Edit"
+                                        FontAttributes="Bold"
+                                        FontSize="15"
+                                        HeightRequest="30"
+                                        BackgroundColor="Orange"
+                                        BorderWidth="1"
+                                        TextColor="White"
+                                        CornerRadius="5"
+                                        Clicked="OnEdit"
+                                        HorizontalOptions="End"/>
                         </Grid>
                     </StackLayout>
                 </DataTemplate>

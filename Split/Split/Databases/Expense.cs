@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using SQLite;
 
 namespace Split
@@ -10,18 +11,25 @@ namespace Split
         public int ID { get; set; }
         public string Title { get; set; }
         public double Amount { get; set; }
-        public int ExpensePersonID { get; set; }
+        // ID of the person who made the expense
+        public int ExpensePersonId { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime DateExpense { get; set; }
-
-        //Record of People and split amount
-        //public Dictionary<People,double> SplitRecord { get; set; }
 
         public Expense()
         {
             DateCreated = new DateTime();
             DateExpense = new DateTime();
-            //SplitRecord = new Dictionary<People, double>();
+        }
+
+        public Expense GetExpense()
+        {
+            return this;
+        }
+
+        public string GetPerson()
+        {
+            return App.PeopleDatabase.GetItemAsync(ExpensePersonId).Result.Name;
         }
     }
 }

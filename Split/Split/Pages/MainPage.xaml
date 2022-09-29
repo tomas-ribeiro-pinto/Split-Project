@@ -66,7 +66,6 @@
                                         FontSize="15"
                                         HeightRequest="30"
                                         BackgroundColor="Orange"
-
                                         BorderWidth="1"
                                         TextColor="White"
                                         CornerRadius="5"

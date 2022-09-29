@@ -26,5 +26,20 @@ namespace Split.Pages
             };
             await Navigation.PushAsync(AddPeoplePage);
         }
+
+        async void OnEdit(object sender, EventArgs e)
+        {
+            var button = (Button)sender;
+            var person = (People)button.BindingContext;
+
+            Page EditPeoplePage = new EditPeoplePage
+            {
+                Title = $"Expenses of {person.Name}"
+            };
+
+            EditPeoplePage.BindingContext = person;
+            await Navigation.PushAsync(EditPeoplePage);
+
+        }
     }
 }

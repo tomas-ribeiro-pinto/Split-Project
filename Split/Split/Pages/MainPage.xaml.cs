@@ -82,7 +82,7 @@ namespace Split
 
             if (answer)
             {
-                await App.ExpenseDatabase.DeleteExpenseEntry(currentSelection);
+                await App.ExpenseDatabase.DeleteExpense(currentSelection);
                 GetTotal();
             }
 

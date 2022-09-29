@@ -9,28 +9,11 @@ namespace Split
     {
         readonly SQLiteAsyncConnection _database;
 
-        Expense expense1 = new Expense
-        {
-            Title = "Coffee Shop",
-            Amount = 2.35,
-        };
-
-        Expense expense2 = new Expense
-        {
-            Title = "Dinner with Mary",
-            Amount = 56.00
-        };
-
         public ExpenseDatabase(string dbPath)
         {
             _database = new SQLiteAsyncConnection(dbPath);
             _database.CreateTableAsync<Expense>().Wait();
 
-            if (_database.Table<Expense>().CountAsync().Result == 0)
-            {
-                _database.InsertAsync(expense1).Wait();
-                _database.InsertAsync(expense2).Wait();
-            }
         }
 
         public Task<List<Expense>> GetExpenseAsync()
@@ -53,13 +36,18 @@ namespace Split
             return _database.InsertAsync(expense);
         }
 
-        public Task<int> DeleteExpenseEntry(Expense expense)
+        public Task<int> DeleteExpense(Expense expense)
         {
+            foreach (ExpenseRecord record in App.RecordDatabase.GetRecordList_byExpense(expense.ID).Result)
+            {
+                App.RecordDatabase.DeleteRecord(record.ID);
+            }
             return _database.DeleteAsync(expense);
         }
 
         public Task<int> DeleteAllExpense()
         {
+            App.RecordDatabase.DeleteAllRecord();
             return _database.DeleteAllAsync<Expense>();
         }
     }
