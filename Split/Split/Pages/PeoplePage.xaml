@@ -18,7 +18,8 @@
                 CornerRadius="30"
                 BackgroundColor="LightGray"
                 Padding="9"
-                Clicked="AddPeoplePage"/>
+                Clicked="AddPeoplePage"
+                Margin="0,0,0,10"/>
         </Grid>
         <CollectionView x:Name="peopleView" HeightRequest="400" SelectionMode="None">
             <CollectionView.ItemTemplate>
@@ -33,12 +34,14 @@
                             </Grid.RowDefinitions>
                                 <Label Text="{Binding Name}"
                                        FontSize="Medium"
+                                       Margin="0,0,0,30"
                                        TextColor="Black"/>
                                 <Button Grid.Column="1"
-                                        Text="Edit"
+                                        Text="See Expenses"
                                         FontAttributes="Bold"
                                         FontSize="15"
                                         HeightRequest="30"
+                                        Margin="0,0,0,10"
                                         BackgroundColor="Orange"
                                         BorderWidth="1"
                                         TextColor="White"

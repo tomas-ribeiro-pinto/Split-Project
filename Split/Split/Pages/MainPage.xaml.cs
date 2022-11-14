@@ -11,7 +11,6 @@ namespace Split
 {
     public partial class MainPage : ContentPage
     {
-        public double CurrentTotal;
 
         public MainPage()
         {
@@ -21,94 +20,36 @@ namespace Split
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            expenseView.ItemsSource = await App.ExpenseDatabase.GetExpenseAsync();
-
-            currentTrip.Text = "Get to know your expenses!";
-            GetTotal();
+            tripView.ItemsSource = await App.SplitDatabase.GetTripListAsync();
         }
 
-        async void GetTotal()
-        {
-            List<Expense> expenses = await App.ExpenseDatabase.GetExpenseAsync();
 
-            double total = 0;
-            totalAmount.Text = String.Empty;
-
-            foreach (Expense expense in expenses)
-            {
-                total += expense.Amount;
-            }
-
-            totalAmount.Text += "Total: " + string.Format("{0:0.00}", total) + "€";
-        }
-
-        /**
-         * !Future improvement to save cost of running time: avoid count every expense's total from list
-         * 
-        async void UpdateTotal(Expense expense)
-        {
-            List<Expense> expenses = await App.ExpenseDatabase.GetExpenseAsync();
-
-            double total = 0;
-            var totalText = totalAmount.Text.Split(':')[1];
-            var actualTotal = totalText.Split('€')[0];
-
-            CurrentTotal += total;
-
-            totalAmount.Text += "Total: " + string.Format("{0:0.00}", total) + "€";
-        }
-        **/
-
-        async void OnEdit(object sender, EventArgs e)
+        async void OnSee(object sender, EventArgs e)
         {
             var button = (Button)sender;
-            var currentSelection = (Expense)button.BindingContext;
+            var currentSelection = (Trip)button.BindingContext;
 
-            Page EditExpensePage = new EditExpensePage
+            Page TripPage = new TripPage
             {
-                Title = "Edit Expense"
+                Title = $"Trip to {currentSelection.Title}"
             };
 
-            EditExpensePage.BindingContext = currentSelection;
-            await Navigation.PushAsync(EditExpensePage);
+            TripPage.BindingContext = currentSelection;
+            await Navigation.PushAsync(TripPage);
 
         }
 
-        async void OnDelete(object sender, EventArgs e)
+        async void OnAddTripClicked(object sender, EventArgs e)
         {
-            var button = (Button)sender;
-            var currentSelection = (Expense)button.BindingContext;
-            bool answer = await DisplayAlert("Delete?", "Would you like to delete this expense?", "Yes", "No");
-
-            if (answer)
+            string result = await DisplayPromptAsync("Add a new Trip", "Enter trip title (e.g. Brazil)");
+            if (!String.IsNullOrEmpty(result))
             {
-                await App.ExpenseDatabase.DeleteExpense(currentSelection);
-                GetTotal();
+                Trip trip = new Trip();
+                trip.Title = result;
+
+                await App.SplitDatabase.SaveTripAsync(trip);
+                OnAppearing();
             }
-
-            expenseView.ItemsSource = await App.ExpenseDatabase.GetExpenseAsync();
-        }
-
-        async void OnDeleteAll(object sender, EventArgs e)
-        {
-            bool answer = await DisplayAlert("Delete All?", "Would you like to delete all the expenses?", "Yes", "No");
-
-            if (answer)
-            {
-                await App.ExpenseDatabase.DeleteAllExpense();
-                GetTotal();
-            }
-
-            expenseView.ItemsSource = await App.ExpenseDatabase.GetExpenseAsync();
-        }
-
-        async void OnAddExpenseClicked(object sender, EventArgs e)
-        {
-            Page AddExpensePage = new AddExpensePage
-            {
-                Title = "Add Expense"
-            };
-            await Navigation.PushAsync(AddExpensePage);
         }
 
         async void SeePeople(object sender, EventArgs e)

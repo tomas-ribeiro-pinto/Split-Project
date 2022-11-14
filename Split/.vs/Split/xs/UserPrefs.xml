@@ -1,52 +1,54 @@
 ﻿<Properties StartupConfiguration="{7CD2BE6F-3196-4575-80F6-82BC02CB40F6}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Split/Pages/EditPeoplePage.xaml">
+  <MonoDevelop.Ide.ItemProperties.Split.Android PreferredExecutionTarget="Android.SelectDevice" />
+  <MonoDevelop.MonoDroid LastDeploySdkVersion="13.1.0.1" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.SelectDevice" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Split/Data/SplitDatabase.cs">
     <Files>
-      <File FileName="Split/Pages/EditPeoplePage.xaml.cs" Line="30" Column="47" IsPinned="True" />
-      <File FileName="Split/Pages/EditPeoplePage.xaml" Line="10" Column="30" />
-      <File FileName="Split/Databases/ExpenseRecord.cs" Line="12" Column="44" />
-      <File FileName="Split/Databases/Expense.cs" Line="33" Column="10" />
+      <File FileName="Split/Pages/EditPeoplePage.xaml.cs" Line="6" Column="1" IsPinned="True" />
+      <File FileName="Split/Pages/AddExpensePage.xaml" />
+      <File FileName="Split/Pages/AddExpensePage.xaml.cs" />
+      <File FileName="Split/Pages/EditPeoplePage.xaml" />
+      <File FileName="Split/Databases/ExpenseRecord.cs" />
+      <File FileName="Split/Databases/Expense.cs" />
       <File FileName="Split/Pages/MainPage.xaml" />
-      <File FileName="Split/Pages/EditExpensePage.xaml.cs" Line="49" Column="41" />
-      <File FileName="Split/App.xaml.cs" Line="13" Column="30" />
-      <File FileName="Split/Databases/ExpenseDatabase.cs" Line="27" Column="10" />
-      <File FileName="Split/Pages/AddExpensePage.xaml.cs" Line="49" Column="1" />
-      <File FileName="Split/Databases/RecordDatabase.cs" Line="50" Column="43" />
-      <File FileName="Split/Databases/PeopleDatabase.cs" />
-      <File FileName="Split/Pages/MainPage.xaml.cs" Line="60" Column="12" />
-      <File FileName="Split.Android/MainActivity.cs" Line="1" Column="1" />
-      <File FileName="Split/App.xaml" Line="1" Column="1" />
-      <File FileName="Split/Pages/AddPeoplePage.xaml.cs" Line="1" Column="1" />
-      <File FileName="Split/Pages/AddPeoplePage.xaml" Line="1" Column="1" />
-      <File FileName="Split/Pages/EditExpensePage.xaml" Line="1" Column="1" />
-      <File FileName="Split/Databases/People.cs" Line="1" Column="1" />
+      <File FileName="Split/Pages/EditExpensePage.xaml.cs" />
+      <File FileName="Split/App.xaml.cs" />
+      <File FileName="Split/Pages/MainPage.xaml.cs" />
+      <File FileName="Split.Android/MainActivity.cs" />
+      <File FileName="Split/App.xaml" />
+      <File FileName="Split/Pages/AddPeoplePage.xaml.cs" />
+      <File FileName="Split/Pages/AddPeoplePage.xaml" />
+      <File FileName="Split/Pages/EditExpensePage.xaml" />
+      <File FileName="Split/Pages/PeoplePage.xaml" />
+      <File FileName="Split/Databases/Trip.cs" />
+      <File FileName="Split/Databases/Photo.cs" />
+      <File FileName="Split/Pages/TripPage.xaml" />
+      <File FileName="Split/Pages/TripPage.xaml.cs" />
+      <File FileName="Split/obj/Debug/netstandard2.0/Pages/TripPage.xaml.g.cs" />
+      <File FileName="Split/Databases/SplitDatabase.cs" Line="23" Column="37" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Split" expanded="True">
             <Node name="Split" expanded="True">
-              <Node name="Databases" expanded="True" />
+              <Node name="Dependencies" expanded="True" />
               <Node name="Pages" expanded="True">
                 <Node name="AddExpensePage.xaml" expanded="True" />
                 <Node name="AddPeoplePage.xaml" expanded="True" />
-                <Node name="EditExpensePage.xaml" expanded="True" />
-                <Node name="EditPeoplePage.xaml" expanded="True" selected="True" />
+                <Node name="EditPeoplePage.xaml" expanded="True" />
                 <Node name="MainPage.xaml" expanded="True" />
-                <Node name="PeoplePage.xaml" expanded="True" />
+                <Node name="TripPage.xaml" expanded="True" />
               </Node>
               <Node name="App.xaml" expanded="True" />
-            </Node>
-            <Node name="Split.Android" expanded="True">
-              <Node name="Resources" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Split.Android PreferredExecutionTarget="Android.SelectDevice" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/tomaspinto/Documents/GitHub/Split-Project/Split/Split/Records/SplitRecordList.cs" relfile="Split/Records/SplitRecordList.cs" line="28" column="1" />

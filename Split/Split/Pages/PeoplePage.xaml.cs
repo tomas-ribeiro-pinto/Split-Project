@@ -15,7 +15,7 @@ namespace Split.Pages
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            peopleView.ItemsSource = await App.PeopleDatabase.GetPeopleAsync();
+            peopleView.ItemsSource = await App.SplitDatabase.GetPersonListAsync();
         }
 
         async void AddPeoplePage(object sender, EventArgs e)
@@ -30,7 +30,7 @@ namespace Split.Pages
         async void OnEdit(object sender, EventArgs e)
         {
             var button = (Button)sender;
-            var person = (People)button.BindingContext;
+            var person = (Person)button.BindingContext;
 
             Page EditPeoplePage = new EditPeoplePage
             {

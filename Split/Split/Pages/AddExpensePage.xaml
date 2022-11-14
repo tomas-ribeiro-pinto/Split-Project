@@ -22,6 +22,33 @@
                 Title="Select the person who made this expense:"
                 ItemDisplayBinding="{Binding Name}"/>
         <Label Text="Define how this expense will be split:"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <Label
+                x:Name="expensePerson"
+                Margin="0,0,0,0"/>
+            <Entry Grid.Column="1"
+                x:Name="expensePersonAmount"
+                IsEnabled="False"/>
+            <Picker Grid.Row="1"
+                x:Name="splitPeopleEntry"
+                Title="Select person"
+                ItemDisplayBinding="{Binding Name}"
+                Margin="0,0,0,0"/>
+            <Entry Grid.Column="1"
+                Grid.Row="1"
+                x:Name="splitAmountEntry"
+                Text="0.00"
+                IsTextPredictionEnabled="False"
+                Keyboard="Numeric"/>
+        </Grid>
         <Button Text="Add Expense"
                 Clicked="AddExpense" />
     </StackLayout>

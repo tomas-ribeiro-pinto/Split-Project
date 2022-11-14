@@ -16,10 +16,63 @@
             Padding="5"
             BackgroundColor="White"/>
         <Label
-            x:Name="currentTrip"
+            Text="Get to know your expenses!"
             FontSize="Subtitle"
             HorizontalOptions="Center"/>
 
+        <Button Text="+ Add Trip"
+            Margin="0, 30, 0, 25"
+            HorizontalOptions="End"
+            CornerRadius="5"
+            BackgroundColor="CornflowerBlue"
+            TextColor="White"
+            FontAttributes="Bold"
+            Clicked="OnAddTripClicked" />
+
+        <Label
+            Text="Trips:"
+            Margin="0, 0, 0, 10"
+            FontAttributes="Bold"
+            TextColor="Black"
+            FontSize="Subtitle"
+            BackgroundColor="Beige"
+            HorizontalOptions="Start"/>
+        
+        <CollectionView x:Name="tripView" HeightRequest="400" SelectionMode="None">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="60" />
+                                </Grid.RowDefinitions>
+                                    <Label Text="{Binding Title}"
+                                           FontSize="Medium"
+                                           TextColor="Black"/>
+                                    <Button Grid.Column="1"
+                                            Text="See Expenses"
+                                            FontAttributes="Bold"
+                                            FontSize="15"
+                                            HeightRequest="10"
+                                            BackgroundColor="Orange"
+                                            BorderWidth="1"
+                                            TextColor="White"
+                                            CornerRadius="5"
+                                            Clicked="OnSee"
+                                            HorizontalOptions="End"/>
+                            </Grid>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </StackLayout>
+
+    <!--
         <Button Text="+ Add Expense"
                 Margin="0, 30, 0, 25"
                 HorizontalOptions="End"
@@ -39,7 +92,8 @@
             HorizontalOptions="Start"/>
 
         <CollectionView x:Name="expenseView" HeightRequest="400" SelectionMode="None">
-            <!--SelectionChanged="expenseView_SelectionChanged"-->
+            <!-SelectionChanged="expenseView_SelectionChanged"->
+
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout>
@@ -92,7 +146,8 @@
                TextColor="White"
             HorizontalOptions="End"
             BackgroundColor="Black"/>
-    </StackLayout>
+
+    -->
 
 </ContentPage>
 

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
+using Page = Xamarin.Forms.Page;
 
 namespace Split
 {
@@ -17,25 +19,24 @@ namespace Split
         {
             base.OnAppearing();
 
-            People person = (People)BindingContext;
-            List<ExpenseRecord> records = await App.RecordDatabase.GetRecordList_byPerson(person.ID);
+            Person person = (Person)BindingContext;
+            List<ExpenseRecord> records = await App.SplitDatabase.GetRecordList_byPerson(person.ID);
 
             List<Expense> expenses = new List<Expense>();
 
             foreach (var item in records)
             {
-                expenses.Add(App.ExpenseDatabase.GetItemAsync(item.SplitExpenseId).Result);
+                expenses.Add(App.SplitDatabase.GetExpenseAsync(item.ExpenseID).Result);
             }
 
             expenseView.ItemsSource = records;
-            //expenseView.SetBinding(ItemsView.ItemsSourceProperty, "records");
         }
 
         async void OnEdit(object sender, EventArgs e)
         {
             var button = (Button)sender;
             var record = (ExpenseRecord)button.BindingContext;
-            Expense currentSelection = App.ExpenseDatabase.GetItemAsync(record.SplitExpenseId).Result;
+            Expense currentSelection = App.SplitDatabase.GetExpenseAsync(record.ExpenseID).Result;
 
             Page EditExpensePage = new EditExpensePage
             {

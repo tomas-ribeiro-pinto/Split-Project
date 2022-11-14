@@ -18,16 +18,14 @@
                             <RowDefinition Height="auto" />
                         </Grid.RowDefinitions>
                             <Label
-                                Text="{Binding SplitAmount, StringFormat='{0:0.00}€'}"
+                                Text="{Binding Title}"
                                 FontSize="Medium"
                                 TextColor="Black"/>
-                        <!--
                             <Label Grid.Row="1"
                                     Margin="0,0,20,20"
-                                    x:Name="expenseSplitAmount"
                                     Text="{Binding SplitAmount, StringFormat='{0:0.00}€'}"
                                     TextColor="Silver"
-                                    FontSize="Medium" /> -->
+                                    FontSize="Medium" />
                             <Button Grid.Column="1"
                                     Text="Edit"
                                     FontAttributes="Bold"

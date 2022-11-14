@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "gqInEQFgtXsRABvI4CK43hauQFmoKj4fRUaZu4TFhFBkfzllqxm8iPNAWsZkE1V1xR+6UiUgppFGeaTxwU9JUg==",
+  "dgSpecHash": "JwFVqdWZGuG/fj6PUB34uErC59AY3lmw774pRphz8gWRY9UI/pRQKSNR8WzYLgPjORVHGGpgE7AXiZPSB/Vlpw==",
   "success": true,
   "projectFilePath": "/Users/tomaspinto/Documents/GitHub/Split-Project/Split/Split.Android/Split.Android.csproj",
   "expectedPackageFiles": [
+    "/Users/tomaspinto/.nuget/packages/newtonsoft.json/9.0.1/newtonsoft.json.9.0.1.nupkg.sha512",
     "/Users/tomaspinto/.nuget/packages/sqlite-net-pcl/1.8.116/sqlite-net-pcl.1.8.116.nupkg.sha512",
+    "/Users/tomaspinto/.nuget/packages/sqlitenetextensions/2.1.0/sqlitenetextensions.2.1.0.nupkg.sha512",
     "/Users/tomaspinto/.nuget/packages/sqlitepclraw.bundle_green/2.0.4/sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",
     "/Users/tomaspinto/.nuget/packages/sqlitepclraw.core/2.0.4/sqlitepclraw.core.2.0.4.nupkg.sha512",
     "/Users/tomaspinto/.nuget/packages/sqlitepclraw.lib.e_sqlite3.android/2.0.4/sqlitepclraw.lib.e_sqlite3.android.2.0.4.nupkg.sha512",
@@ -62,5 +64,26 @@
     "/Users/tomaspinto/.nuget/packages/xamarin.google.android.material/1.2.1.1/xamarin.google.android.material.1.2.1.1.nupkg.sha512",
     "/Users/tomaspinto/.nuget/packages/xamarin.google.guava.listenablefuture/1.0.0.2/xamarin.google.guava.listenablefuture.1.0.0.2.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Essentials from 1.7.3 to 1.6.1. Reference the package directly from the project to select a different version. \n Split.Android -> Split -> Xamarin.Essentials (>= 1.7.3) \n Split.Android -> Xamarin.Essentials (>= 1.6.1)",
+      "libraryId": "Xamarin.Essentials",
+      "targetGraphs": [
+        "MonoAndroid,Version=v11.0"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Forms from 5.0.0.2515 to 5.0.0.2012. Reference the package directly from the project to select a different version. \n Split.Android -> Split -> Xamarin.Forms (>= 5.0.0.2515) \n Split.Android -> Xamarin.Forms (>= 5.0.0.2012)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "MonoAndroid,Version=v11.0"
+      ]
+    }
+  ]
 }

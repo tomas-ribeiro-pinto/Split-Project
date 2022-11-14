@@ -19,7 +19,7 @@ namespace Split
             Expense expense = (Expense)BindingContext;
             try
             {
-                expensePerson.Text += expense.GetPerson();
+                expensePerson.Text += expense.GetPersonName();
             }
             catch
             {
@@ -36,8 +36,8 @@ namespace Split
 
             if (answer)
             {
-                await App.ExpenseDatabase.DeleteExpense(currentSelection);
-                await Navigation.PopToRootAsync(true);
+                await App.SplitDatabase.DeleteExpenseAsync(currentSelection);
+                await Navigation.PopAsync(true);
             }
         }
 
@@ -61,11 +61,12 @@ namespace Split
             {
                 currentSelection.Title = titleEntry.Text;
                 currentSelection.Amount = double.Parse(amountEntry.Text);
-                await App.ExpenseDatabase.UpdateExpenseAsync(currentSelection);
-                foreach (ExpenseRecord record in App.RecordDatabase.GetRecordList_byExpense(currentSelection.ID).Result)
+                await App.SplitDatabase.UpdateExpenseAsync(currentSelection);
+                foreach (ExpenseRecord record in App.SplitDatabase.GetRecordList_byExpense(currentSelection.ID).Result)
                 {
                     record.SplitAmount = double.Parse(amountEntry.Text);
-                    await App.RecordDatabase.UpdateRecordAsync(record);
+                    record.Title = titleEntry.Text;
+                    await App.SplitDatabase.UpdateRecordAsync(record);
                 }
                 await Navigation.PopToRootAsync(false);
             }

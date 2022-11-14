@@ -88,13 +88,17 @@
               "version": "[2.0.3, )",
               "autoReferenced": true
             },
+            "SQLiteNetExtensions": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.6.1, )"
+              "version": "[1.7.3, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[5.0.0.2012, )"
+              "version": "[5.0.0.2515, )"
             },
             "sqlite-net-pcl": {
               "target": "Package",

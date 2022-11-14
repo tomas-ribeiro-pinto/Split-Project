@@ -14,7 +14,17 @@ namespace Split
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            peopleEntry.ItemsSource = await App.PeopleDatabase.GetPeopleAsync();
+            peopleEntry.ItemsSource = await App.SplitDatabase.GetPersonListAsync();
+            splitPeopleEntry.ItemsSource = await App.SplitDatabase.GetPersonListAsync();
+            try
+            {
+                expensePerson.Text = splitPeopleEntry.SelectedItem.ToString();
+                expensePersonAmount.Text = amountEntry.Text;
+            }
+            catch
+            {
+                expensePersonAmount.Text = "0.00";
+            }
             dateEntry.MaximumDate = DateTime.Now;
         }
 
@@ -25,30 +35,33 @@ namespace Split
                 && peopleEntry.SelectedItem != null)
             {
                 // create DateTime() from selected date on picker
-                People person = (People)peopleEntry.SelectedItem;
+                Person person = (Person)peopleEntry.SelectedItem;
 
                 Expense newExpense = new Expense()
                 {
+                    TripID = Pages.TripPage.bindingTrip.ID,
                     Title = titleEntry.Text,
                     Amount = double.Parse(amountEntry.Text),
                     DateExpense = dateEntry.Date,
                     DateCreated = DateTime.Now,
-                    ExpensePersonId = person.ID
+                    PersonID = person.ID
                 };
 
-                await App.ExpenseDatabase.SaveExpenseAsync(newExpense);
+                await App.SplitDatabase.SaveExpenseAsync(newExpense);
 
                 ExpenseRecord expenseRecord = new ExpenseRecord()
                 {
-                    SplitPersonId = person.ID,
-                    SplitExpenseId = newExpense.ID,
-                    SplitAmount = double.Parse(amountEntry.Text)
+                    PersonID = person.ID,
+                    ExpenseID = newExpense.ID,
+                    SplitAmount = double.Parse(amountEntry.Text),
+                    Title = titleEntry.Text
                 };
 
-                await App.RecordDatabase.SaveRecordAsync(expenseRecord);
+                await App.SplitDatabase.SaveRecordAsync(expenseRecord);
 
                 titleEntry.Text = amountEntry.Text = string.Empty;
-                await Navigation.PopToRootAsync(false);
+                await Navigation.PopAsync(false);
+                
             }
         }
     }
