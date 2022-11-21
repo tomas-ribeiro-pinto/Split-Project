@@ -13,14 +13,33 @@
             Padding="5"
             BackgroundColor="White"/>
 
-        <Button Text="+ Add Expense"
-                Margin="0, 30, 0, 25"
-                HorizontalOptions="End"
-                CornerRadius="5"
-                BackgroundColor="CornflowerBlue"
-                TextColor="White"
-                FontAttributes="Bold"
-                Clicked="OnAddExpenseClicked" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="350"/>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+                <Button Text="Payments"
+                        x:Name="paymentsButton"
+                        Margin="0, 30, 0, 25"
+                        HorizontalOptions="Start"
+                        CornerRadius="5"
+                        BackgroundColor="OrangeRed"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        Clicked="OnPaymentsClicked" />
+
+                <Button Text="+ Add Expense"
+                        Margin="0, 30, 0, 25"
+                        HorizontalOptions="End"
+                        CornerRadius="5"
+                        BackgroundColor="CornflowerBlue"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        Clicked="OnAddExpenseClicked" />
+        </Grid>
 
         <Label
             Text="Expenses:"

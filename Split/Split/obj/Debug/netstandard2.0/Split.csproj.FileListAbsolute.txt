@@ -35,3 +35,4 @@
 /Users/tomaspinto/Documents/GitHub/Split-Project/Split/Split/obj/Debug/netstandard2.0/Pages/AddPeoplePage.xaml.g.cs
 /Users/tomaspinto/Documents/GitHub/Split-Project/Split/Split/obj/Debug/netstandard2.0/Pages/EditPeoplePage.xaml.g.cs
 /Users/tomaspinto/Documents/GitHub/Split-Project/Split/Split/obj/Debug/netstandard2.0/Pages/TripPage.xaml.g.cs
+/Users/tomaspinto/Documents/GitHub/Split-Project/Split/Split/obj/Debug/netstandard2.0/Pages/PaymentsPage.xaml.g.cs

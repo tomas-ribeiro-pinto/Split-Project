@@ -68,7 +68,7 @@ namespace Split
                     record.Title = titleEntry.Text;
                     await App.SplitDatabase.UpdateRecordAsync(record);
                 }
-                await Navigation.PopToRootAsync(false);
+                await Navigation.PopAsync(false);
             }
         }
     }

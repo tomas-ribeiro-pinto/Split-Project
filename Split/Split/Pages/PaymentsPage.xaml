@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+        xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="Split.Pages.PaymentsPage">
+
+<StackLayout Margin="20,35,20,20">
+        <Label
+            Text="Payments"
+            HorizontalOptions="Center"
+            TextColor="Black"
+            FontSize="Title"
+            Padding="5"
+            BackgroundColor="White"/>
+        <Label
+            Text="Split equally among all"
+            HorizontalOptions="Center"
+            TextColor="Gray"
+            FontSize="Subtitle"
+            Padding="5"/>
+
+        <CollectionView x:Name="splitView" HeightRequest="450" SelectionMode="None" Margin="0,30,0,0">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto" />
+                                <RowDefinition Height="auto" />
+                            </Grid.RowDefinitions>
+                                <Label Text="{Binding Person.Name}"
+                                       FontSize="Medium"
+                                       TextColor="Black"/>
+                                <Label Grid.Column="1"
+                                       Text="{Binding Total, StringFormat='{0:0.00}€'}"
+                                       TextColor="DarkBlue"
+                                       HorizontalOptions="End"
+                                       FontSize="Large" />
+                                <Label Grid.Column="2"
+                                       Text="{Binding AmountDue, StringFormat='{0:0.00}€'}"
+                                       TextColor="Red"
+                                       HorizontalOptions="End"
+                                       FontSize="Large" />
+                        </Grid>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Label x:Name="totalAmount"
+               FontSize="Large"
+               Padding="10"
+               TextColor="White"
+            HorizontalOptions="End"
+            BackgroundColor="Black"/>
+    </StackLayout>
+
+</ContentPage>
+

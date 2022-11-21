@@ -8,9 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Split.Pages.EditPeoplePage.xaml", "Pages/EditPeoplePage.xaml", typeof(global::Split.EditPeoplePage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Split.Pages.EditPeoplePage.xaml", "Pages/EditPeoplePage.xaml", typeof(global::Split.Pages.EditPeoplePage))]
 
-namespace Split {
+namespace Split.Pages {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Pages/EditPeoplePage.xaml")]

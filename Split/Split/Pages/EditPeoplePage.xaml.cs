@@ -5,7 +5,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 using Page = Xamarin.Forms.Page;
 
-namespace Split
+namespace Split.Pages
 {
     public partial class EditPeoplePage : ContentPage
     {

@@ -11,8 +11,9 @@ namespace Split.Pages
 {
     public partial class TripPage : ContentPage
     {
-        public double CurrentTotal;
+        public static double Total;
         public static Trip bindingTrip;
+        public List<Expense> expenses;
 
         public TripPage()
         {
@@ -22,27 +23,31 @@ namespace Split.Pages
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            expenseView.ItemsSource = await App.SplitDatabase.GetExpenseListAsync();
-
             Trip trip = (Trip)BindingContext;
             bindingTrip = trip;
             currentTrip.Text = trip.Title;
+
+            expenses = await App.SplitDatabase.GetExpenseList_byTrip(bindingTrip.ID);
+            expenseView.ItemsSource = expenses;
+            if (expenses.Count() == 0)
+            {
+                paymentsButton.IsEnabled = false;
+                paymentsButton.BackgroundColor = Color.LightGray;
+            }
+            else
+            {
+                paymentsButton.IsEnabled = true;
+                paymentsButton.BackgroundColor = Color.OrangeRed;
+            }
+
             GetTotal();
         }
 
-        async void GetTotal()
+        void GetTotal()
         {
-            List<Expense> expenses = await App.SplitDatabase.GetExpenseListAsync();
+            Total = Expense.SumOfExpenses(expenses);
 
-            double total = 0;
-            totalAmount.Text = String.Empty;
-
-            foreach (Expense expense in expenses)
-            {
-                total += expense.Amount;
-            }
-
-            totalAmount.Text += "Total: " + string.Format("{0:0.00}", total) + "€";
+            totalAmount.Text = "Total: " + string.Format("{0:0.00}", Total) + "€";
         }
 
         async void OnEdit(object sender, EventArgs e)
@@ -60,32 +65,15 @@ namespace Split.Pages
 
         }
 
-        async void OnDelete(object sender, EventArgs e)
-        {
-            var button = (Button)sender;
-            var currentSelection = (Expense)button.BindingContext;
-            bool answer = await DisplayAlert("Delete?", "Would you like to delete this expense?", "Yes", "No");
-
-            if (answer)
-            {
-                await App.SplitDatabase.DeleteExpenseAsync(currentSelection);
-                GetTotal();
-            }
-
-            expenseView.ItemsSource = await App.SplitDatabase.GetExpenseListAsync();
-        }
-
         async void OnDeleteAll(object sender, EventArgs e)
         {
             bool answer = await DisplayAlert("Delete All?", "Would you like to delete all the expenses?", "Yes", "No");
 
             if (answer)
             {
-                await App.SplitDatabase.DeleteAllExpenseAsync();
-                GetTotal();
+                App.SplitDatabase.DeleteAllExpenseAsync(bindingTrip.ID);
+                OnAppearing();
             }
-
-            expenseView.ItemsSource = await App.SplitDatabase.GetExpenseListAsync();
         }
 
         async void OnAddExpenseClicked(object sender, EventArgs e)
@@ -95,6 +83,15 @@ namespace Split.Pages
                 Title = "Add Expense"
             };
             await Navigation.PushAsync(AddExpensePage);
+        }
+
+        async void OnPaymentsClicked(object sender, EventArgs e)
+        {
+            Page PaymentsPage = new PaymentsPage
+            {
+                Title = $"Payments due on trip to {bindingTrip.Title}"
+            };
+            await Navigation.PushAsync(PaymentsPage);
         }
     }
 }

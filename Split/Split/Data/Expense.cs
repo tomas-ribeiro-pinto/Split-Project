@@ -32,5 +32,17 @@ namespace Split
         {
             return App.SplitDatabase.GetPersonAsync(PersonID).Result.Name;
         }
+
+        public static double SumOfExpenses(List<Expense> expenses)
+        {
+            double total = 0;
+
+            foreach (Expense expense in expenses)
+            {
+                total += expense.Amount;
+            }
+
+            return total;
+        }
     }
 }

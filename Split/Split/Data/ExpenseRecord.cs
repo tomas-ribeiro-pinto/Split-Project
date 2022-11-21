@@ -11,6 +11,8 @@ namespace Split
         public int ID { get; set; }
         // Expense ID linked to this record
         public int ExpenseID { get; set; }
+        // Trip ID linked to this record
+        public int TripID { get; set; }
         // ID for the person linked to this expense record
         public int PersonID { get; set; }
         // Title copied from the expense

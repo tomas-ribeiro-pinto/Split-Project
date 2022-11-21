@@ -51,6 +51,7 @@ namespace Split
 
                 ExpenseRecord expenseRecord = new ExpenseRecord()
                 {
+                    TripID = newExpense.TripID,
                     PersonID = person.ID,
                     ExpenseID = newExpense.ID,
                     SplitAmount = double.Parse(amountEntry.Text),

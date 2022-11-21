@@ -25,6 +25,11 @@ namespace Split
             return _database.Table<Expense>().ToListAsync();
         }
 
+        public Task<List<Expense>> GetExpenseList_byTrip(int tripId)
+        {
+            return _database.Table<Expense>().Where(i => i.TripID == tripId).ToListAsync();
+        }
+
         public Task<Expense> GetExpenseAsync(int id)
         {
             return _database.Table<Expense>().Where(i => i.ID == id).FirstOrDefaultAsync();
@@ -49,6 +54,14 @@ namespace Split
             return _database.DeleteAsync(expense);
         }
 
+        public void DeleteAllExpenseAsync(int tripId)
+        {
+            foreach (Expense expense in GetExpenseList_byTrip(tripId).Result)
+            {
+                DeleteExpenseAsync(expense);
+            }
+        }
+
         public Task<int> DeleteAllExpenseAsync()
         {
             DeleteAllRecordAsync();
@@ -66,9 +79,17 @@ namespace Split
 
         /// <summary>
         ///     Returns all the records from a specific person ID
+        ///     from a specific trip ID.
         /// </summary>
         /// <param name="personId"></param>
+        /// <param name="tripId"></param>
         /// <returns>List with records of expenses made by 'person'</returns>
+        public Task<List<ExpenseRecord>> GetRecordList_byPerson(int personId, int tripId)
+        {
+            return _database.Table<ExpenseRecord>().
+                Where(i => i.PersonID == personId && i.TripID == tripId).ToListAsync();
+        }
+
         public Task<List<ExpenseRecord>> GetRecordList_byPerson(int personId)
         {
             return _database.Table<ExpenseRecord>().
